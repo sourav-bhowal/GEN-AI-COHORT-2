@@ -45,6 +45,7 @@ Output: {{
 and so on...
 """
 
+# Prompt the user for input
 USER_PROMPT = input("Please enter your question: ")
 
 
@@ -54,6 +55,7 @@ conversation = [
     {"role": "user", "content": USER_PROMPT}
 ]
 
+# Start the conversation loop
 while True:
     # Call the OpenAI API to get a response
     response = client.chat.completions.create(
