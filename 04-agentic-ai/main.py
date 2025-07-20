@@ -17,7 +17,6 @@ def run_command(command: str):
 
 
 def get_weather(location: str):
-    # Simulate a function that fetches weather data for the given location
     url = f"https://wttr.in/{location}?format=%C+%t"
     response = requests.get(url)
 
