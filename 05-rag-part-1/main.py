@@ -36,7 +36,7 @@ vector_store = QdrantVectorStore.from_documents(
     collection_name="genai-rag",
     embedding=embedding_model,
     prefer_grpc=True,
-    api_key = os.environ.get("QDRANT_API_KEY")
+    api_key=os.environ.get("QDRANT_API_KEY")
 )
 
 print("Vector store created and documents indexed successfully.")
