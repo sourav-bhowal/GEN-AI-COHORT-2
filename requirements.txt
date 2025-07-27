@@ -20,10 +20,15 @@ jsonpointer==3.0.0
 langchain-core==0.3.72
 langchain-openai==0.3.28
 langchain-qdrant==0.2.0
+langgraph==0.5.4
+langgraph-checkpoint==2.1.1
+langgraph-prebuilt==0.5.2
+langgraph-sdk==0.1.74
 langsmith==0.4.8
 numpy==2.3.2
 openai==1.97.1
 orjson==3.11.1
+ormsgpack==1.10.0
 packaging==25.0
 portalocker==3.2.0
 protobuf==6.31.1
@@ -46,4 +51,5 @@ typing-inspection==0.4.1
 typing_extensions==4.14.1
 urllib3==2.5.0
 uvicorn==0.35.0
+xxhash==3.5.0
 zstandard==0.23.0
