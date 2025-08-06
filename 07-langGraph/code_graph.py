@@ -238,7 +238,7 @@ def increment_retry_count(state: State) -> State:
     print(f"Retry count incremented to: {state['retry_count']}")
     return state
 
-# Create a state graph builder
+# Create a state graph builder by passing the State class
 # This will help in constructing the graph with nodes and edges
 graph_builder = StateGraph(State)
 
@@ -294,11 +294,15 @@ def main():
         "retry_count": 0  # Initialize retry count to 0
     }
 
-    # Invoke the graph with the initial state
-    res = graph.invoke(initial_state)
-
+    # Invoke the graph with the initial state (direct output)
+    # res = graph.invoke(initial_state)
+    
     # Print the final state
-    print("Final State:", res)
+    # print("Final State:", res)
     
-    
+    # We can also stream the graph (streaming output)
+    for event in graph.stream(initial_state, stream_mode="messages"):
+        print("Event", event)
+
+
 main()

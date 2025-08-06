@@ -17,15 +17,15 @@ services:
     ports:
       - 6333:6333
 
-#   mongodb:
-#     image: mongo
-#     ports:
-#       - 27017:27017
-#     environment:
-#       MONGO_INITDB_ROOT_USERNAME: admin
-#       MONGO_INITDB_ROOT_PASSWORD: admin
-#     volumes:
-#       - mongodb_data:/data/db
+  mongodb:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    volumes:
+      - mongodb_data:/data/db
 
 #   neo4j:
 #     image: neo4j:latest
@@ -43,6 +43,6 @@ services:
 #       NEO4J_apoc_export_file_enabled: 'true'
 #       NEO4J_apoc_import_file_use__neo4j__config: 'true'
 
-# volumes:
-#   mongodb_data:
+volumes:
+  mongodb_data:
 #   neo4j_data:

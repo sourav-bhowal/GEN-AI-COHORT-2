@@ -20,7 +20,7 @@ def chat(
     Endpoint to handle chat queries.
     This endpoint accepts a query string and enqueues it for processing.
     """
-    # Enqueue the query for processing (asynchronously) it takes 2 parameters (query and process_query function)
+    # Enqueue the query for processing (asynchronously) it takes 2 parameters (query and process_query function, process_query takes the query)
     job = queue.enqueue(process_query, query)
 
     # Return a response indicating the query has been received
