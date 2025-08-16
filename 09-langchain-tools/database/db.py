@@ -37,11 +37,6 @@ def get_user_sessions():
         if 'checkpoints' in db.list_collection_names():
             checkpoint_sessions = db.checkpoints.distinct("thread_id")
             sessions.update(checkpoint_sessions)
-        
-        # Also check for 'chat_checkpoints' if using custom collection name
-        if 'chat_checkpoints' in db.list_collection_names():
-            chat_sessions = db.chat_checkpoints.distinct("thread_id")
-            sessions.update(chat_sessions)
             
         return list(sessions)
         

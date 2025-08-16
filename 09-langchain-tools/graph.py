@@ -134,7 +134,6 @@ def main():
     with MongoDBSaver.from_conn_string(
         DB_URI, 
         db_name="ai_agent",  # Use the database name 'ai_agent' for consistency
-        collection_name="chat_checkpoints"  # Use a specific collection for chat history
     ) as mongodb_checkpointer:
 
         # Compile the graph with the MongoDB checkpointer
