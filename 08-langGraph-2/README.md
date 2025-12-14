@@ -339,7 +339,7 @@ result2 = graph.invoke({"messages": [...]}, config)
 ## Configuration Requirements
 
 ```env
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/
+MONGODB_URI=
 OPENAI_API_KEY=your_openai_key
 ```
 
